@@ -1,7 +1,7 @@
 name: Run nodejs index.js
 on: [push]
 jobs:
-  run-script:
+ MoroccoAI Server ✅ :
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
