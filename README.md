@@ -1,7 +1,7 @@
 <p align="center"> 
 <a href="https://github.com/GataNina-Li"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=17&duration=4000&color=F7B11B&center=falso&vCenter=falso&lines=GataBot-MD++%F0%9F%90%88;Gracias+por+visitar+este+repositorio.+%F0%9F%92%96" height="90px"></a> 
 </p>
-
+ 
 <p align="center">
 <img src="https://i.imgur.com/kd8sus3.jpeg" alt="GataBot-MD" width="800"/>
   
@@ -27,6 +27,8 @@
 <div align="center">
   
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:centergatabot@gmail.com)
+[![Support](https://img.shields.io/badge/Support-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/SoporteGataBot)
+[![WhatsApp](https://img.shields.io/badge/STAFF-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/message/C45GXBEFTPONE1)
 [![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/groups/872989990425789/)
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@gatadios)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/gata_dios)
@@ -175,46 +177,64 @@ https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
 ```bash
 https://github.com/clhuang/heroku-buildpack-webp-binaries.git
 ```
------
 - [x] Resultado <details><summary>Buildpack</summary><img src="https://i.imgur.com/t3Xzgnh.jpeg"></details>
 -----
 
-### ✅ BOXMINEHOST 
-[![blog](https://img.shields.io/badge/BoxMine-GataBotMD-FF0000?style=for-the-badge&logo=youtube&logoColor=white)
-](https://youtu.be/Ko019wvu2Tc)
-> Activar GataBot-MD 24/7 en BoxMine Host
-
-<a href="https://boxmineworld.com"><img src="https://i.imgur.com/allAyd4.png" height="125px"></a>
-### BoxMine World
-
-- Pagina Oficial: [`https://boxmineworld.com`](https://boxmineworld.com)
-- Tutorial - Crea una cuenta en la Dashboard: [`https://www.youtube.com/watch?v=ZAwBLuNmIlI`](https://www.youtube.com/watch?v=ZAwBLuNmIlI)
-- Dashboard: [`https://dash.boxmineworld.com`](https://dash.boxmineworld.com)
-- Panel: [`https://panel.boxmineworld.com`](https://panel.boxmineworld.com)
-- Dudas UNICAMENTE SOBRE EL HOST: [`https://discord.gg/84qsr4v`](https://discord.gg/84qsr4v) (Preguntar por Vicemi)
-
-- [x] Resultado <details><summary>Ajustes del Servidor - GataBot-MD</summary><img src="https://i.imgur.com/N0SwvbY.jpeg"></details>
-------------------
 ### ⚡ REPLIT - GATABOT
 [![blog](https://img.shields.io/badge/Replit-GataBotMD-FF0000?style=for-the-badge&logo=youtube&logoColor=white)
 ](https://youtu.be/pQYkq4xv37o)
-<a target="_blank" href="https://replit.com/github/GataNina-Li/GataBot-MD"><img alt="Run on Replit" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg"></a>
-<a href="https://replit.com/github/GataNina-Li/GataBot-MD"> <img src="https://media0.giphy.com/media/lMwu8EJAnv9kmn51KQ/giphy.gif" height="29px"></a>
-------------------
-- [x] Resultado <details><summary>Importar Repositorio - GataBot-MD</summary><img src="https://i.imgur.com/GQyRnMf.jpg"></details>
-------------------
-### 🟢 VORTEXUSCLOUD HOST
-> Activar GataBot-MD 24/7 en Vortexuscloud Host
+
+<a target="_blank" href="https://replit.com/github/GataNina-Li/GataBot-MD"><img alt="Run on Replit" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg"></a> <a href="https://replit.com/github/GataNina-Li/GataBot-MD"> <img src="https://media0.giphy.com/media/lMwu8EJAnv9kmn51KQ/giphy.gif" height="29px"></a>
+
+- [x] Configuración <details><summary>Importar Repositorio - GataBot-MD</summary><img src="https://i.imgur.com/GQyRnMf.jpg"></details>
+-----
+### 📦⛏️ BOXMINE HOST 
+[![YouTube](https://img.shields.io/badge/BoxMine_Host-GataBot-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/Ko019wvu2Tc)
+[![YouTube](https://img.shields.io/badge/BoxMine_Host-World-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@boxminehost)
+
+> Tutorial para activar **GataBot-MD** en un servidor reconocido y para todos.
+
+<a href="https://boxmineworld.com"><img src="https://i.imgur.com/allAyd4.png" height="125px"></a>
+### BoxMine World
+- **Pagina Oficial:** [`Boxmineworld`](https://boxmineworld.com)
+- **Tutorial - Crear cuenta en la Dashboard:** [`Dashboard`](https://www.youtube.com/watch?v=ZAwBLuNmIlI)
+- **Dashboard:** [`Dash`](https://dash.boxmineworld.com)
+- **Panel:** [`Aquí`](https://panel.boxmineworld.com)
+- **Dudas sobre el Host:** [`Discord`](https://discord.gg/84qsr4v) _(Preguntar por Vicemi)_
+- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029Va71C1q2UPBOICnxu83r)
+
+- [x] **Configuración** <details><summary>**Ajustes del Servidor - GataBot-MD**</summary><img src="https://i.imgur.com/tD3NQSR.jpeg"></details>
+----
+### 🔵 CAFIREXOS 
+> Optimice la implementación de **GataBot** mediante la integración en un servicio de alojamiento de alto rendimiento.
+
+<a href="https://www.cafirexos.com"><img src="https://grxcwmcwbxwj.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grxcwmcwbxwj/b/cafirexos/o/logos%2Flogo.png" height="125px"></a>
+### Información del Host
+
+- **Página:** [`Cafirexos`](https://www.cafirexos.com)
+- **Dashboard:** [`Aquí`](https://dash.cafirexos.com)
+- **Panel:** [`Aquí`](https://panel.cafirexos.com/)
+- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029VaFVSkRCMY0KFmCMDX2q)
+- **Grupo de WhatsApp:** [`Aquí`](https://chat.whatsapp.com/FBtyc8Q5w2iJXVl5zGJdFJ)
+- **Correo:** [`Aquí`](mailto:contacto@cafirexos.com)
+- **Contacto:** [`Diego Flores`](https://wa.me/50497150165)
+
+- [x] **Configuración** <details><summary>**Ajustes del Servidor - GataBot-MD**</summary><img src="https://i.imgur.com/VPvoE5k.jpeg"></details>
+----
+### ☁️ VORTEXUS CLOUD - HOST
+> Integra **GataBot** en un servicio de alojamiento eficiente.
 
 <a href="https://vortexuscloud.com"><img src="https://telegra.ph/file/4bd3d8d14e5683073d4f3.jpg" height="125px"></a>
 ### vortexus cloud
 
-- Pagina Oficial: [`https://vortexuscloud.com`](https://vortexuscloud.com)
-- Tutorial - Crea una cuenta en la Dashboard: [`https://youtu.be/U3CEj0OlB9U?si=IMQAcGfGgYOqqVyZ`](https://youtu.be/U3CEj0OlB9U?si=IMQAcGfGgYOqqVyZ)
-- Dashboard: [`https://dash.vortexuscloud.com`](https://dash.vortexuscloud.com)
-- Panel: [`https://panel.vortexuscloud.com`](https://panel.vortexuscloud.com)
-- Dudas UNICAMENTE SOBRE EL HOST: [`wa.me/258858119033`](wa.me/258858119033) (Creador: Mauro) 
-- Canal sobre informacion del host : [`https://whatsapp.com/channel/0029Va8ZD6O3mFXxTPl1m13A`](https://whatsapp.com/channel/0029Va8ZD6O3mFXxTPl1m13A)
+- **Pagina Oficial:** [`Vortexuscloud`](https://vortexuscloud.com)
+- **Crear cuenta en la Dashboard:** [`Dashboard`](https://youtu.be/JUg7DWUY6_Y?si=DHwk9dwjvWdPEIBJ)
+- **Dashboard:** [`Dash`](https://dash.vortexuscloud.com)
+- **Panel:** [`Aquí`](https://panel.vortexuscloud.com)
+- **Contacto:** [`Aquí`](https://wa.me/258858119033) 
+- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029Va8ZD6O3mFXxTPl1m13A)
+
+- [x] **Configuración** <details><summary>**Ajustes del Servidor - GataBot-MD**</summary><img src="https://i.imgur.com/Ly0MffH.jpeg"></details>
 ------------------
 ### 🌱 ACTIVAR EN KOYEB 
 
@@ -254,7 +274,7 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
 <details>
 <summary><b>¿Te gustaría ser un Distribuidores Autorizados o reseller de GataBot?</b></summary>
   
-- ¡Contáctanos [**aquí**](https://wa.me/message/MEKOUFBEOG5ED1) para solicitar tu [**Licencia**](https://github.com/GataNina-Li/GataBot-MD/blob/master/terms.md)!
+- ¡Contáctanos **[correo electrónico](centergatabot@gmail.com)** o **[Telegram](https://t.me/SoporteGataBot)** para solicitar tu [**Licencia**](https://github.com/GataNina-Li/GataBot-MD/blob/master/terms.md)!
 </details>
 
 <details>
@@ -266,7 +286,7 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
 <details>
 <summary><b>¿Dónde puedes solicitar la licencia para ser Distribuidor Autorizado o reseller de GataBot?</b></summary>
 
-  - Te ofrecemos tres opciones exclusivas: **[WhatsApp](https://wa.me/message/MEKOUFBEOG5ED1)**, **[Instagram](https://www.instagram.com/gata_dios/)** y **[correo electrónico](centergatabot@gmail.com)**.
+  - Te ofrecemos opciones exclusivas: **[Instagram](https://www.instagram.com/gata_dios/)**, **[Telegram](https://t.me/SoporteGataBot)**, y **[correo electrónico](centergatabot@gmail.com)**.
 </details>
 
 <details>
@@ -298,4 +318,4 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
 
 ### 🌟 CREADORA 
 [![GataNina-Li](https://github.com/GataNina-Li.png?size=100)](https://github.com/GataNina-Li) 
-> Copyright (c) 2023 **[GataNina-Li](https://github.com/GataNina-Li/GataBot-MD/blob/master/LICENSE)**.
+> Copyright (c) 2024 **[GataNina-Li](https://github.com/GataNina-Li/GataBot-MD/blob/master/LICENSE)**.

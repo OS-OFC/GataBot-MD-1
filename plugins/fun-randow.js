@@ -1,33 +1,296 @@
-const contoh = `*Asmaul Husna*
-`
-// data here
-const anjuran = `
-Desde Abu Hurairah radhiallahu anhu, Rasulullah SAW dijo: "Tengo noventa y nueve nombres, cien menos 1. Quien los memorice entrará en el Paraíso, y él es un acorde que ama el acorde."
+let handler = async (m, { conn, command, text, usedPrefix, args}) => {
+if (!db.data.chats[m.chat].game) throw `${lenguajeGB['smsAvisoAG']()}𝙇𝙊𝙎 𝙅𝙐𝙀𝙂𝙊𝙎 𝙀𝙎𝙏𝘼𝙎 𝘿𝙀𝙎𝘼𝘾𝙏𝙄𝙑𝘼𝘿𝙊 𝙀𝙉 𝙀𝙎𝙏𝙀 𝙂𝙍𝙐𝙋𝙊, 𝙎𝙄 𝙀𝙍𝙀𝙎 𝘼𝘿𝙈𝙄𝙉𝙎 𝙋𝙐𝙀𝘿𝙀 𝘼𝘾𝙏𝙄𝙑𝘼𝙍𝙇𝙊 𝘾𝙊𝙉 : #on juegos` 
+
+if (command == 'piropo') {
+await m.reply(`╭┄〔 *${wm}* 〕┄⊱\n┊\nდ *"${pickRandom(global.piropo)}"*\n┊\n*╰━━━⊰ 𓃠 ${vs} ⊱━━━━დ*`)
+}
+
+if (command == 'chiste') { 
+await m.reply(`╭┄〔 *${wm}* 〕┄⊱\n┊\n *😹 ${pickRandom(global.chiste)} 😹*\n┊\n*╰━━━⊰ 𓃠 ${vs} ⊱━━━━დ*`)
+}
+
+if (command == 'reto') {
+await conn.reply(m.chat,`╭━━━━━[ 𝙍𝙀𝙏𝙊 😏 ]━━━━⬣\n*“${pickRandom(global.bucin)}”*\n╰━━━━━━[ ${vs} ]━━━━━⬣`, m)
+}
+
+if (command == 'verdad') {
+await conn.reply(m.chat,`╭━━━━[ 𝙑𝙀𝙍𝘿𝘼𝘿 🤔 ]━━━━⬣\n*“${pickRandom(global.bucin)}”*\n╰━━━━━━[ ${vs} ]━━━━━⬣`, m)
+}
+
+if (command == 'frases') { 
+const ejemplo = `*Asmaul Husna*` 
+const organizar = `Desde Abu Hurairah radhiallahu anhu, Rasulullah SAW dijo: "Tengo noventa y nueve nombres, cien menos 1. Quien los memorice entrará en el Paraíso, y él es un acorde que ama el acorde."
 Significado: "De hecho, yo tengo noventa y nueve nombres, también conocido como cien menos uno. Quien los cuente, entrará en el cielo; Él es Witr y ama a Witr".`
-
-let handler = async (m, { args, usedPrefix, command }) => {
-    let json = JSON.parse(JSON.stringify(global.asmaulhusna))
-    let data = json.map((v, i) => `${i + 1}. ${v.latin}\n${v.arabic}\n${v.translation_id}`).join('\n\n')
-    if (isNaN(args[0])) throw `Ejemplo:\n${usedPrefix + command} 1`
-    if (args[0]) {
-        if (args[0] < 1 || args[0] > 99) throw `mínimo 1 y máximo 99!`
-        let { index, latin, arabic, translation_id, translation_en } = json.find(v => v.index == args[0].replace(/[^0-9]/g, ''))
-        return m.reply(`🔢 *Número:* ${index}
+let json = JSON.parse(JSON.stringify(global.asmaulhusna))
+let data = json.map((v, i) => `${i + 1}. ${v.latin}\n${v.arabic}\n${v.translation_id}`).join('\n\n')
+if (isNaN(args[0])) throw `Ejemplo:\n${usedPrefix + command} 1`
+if (args[0]) {
+if (args[0] < 1 || args[0] > 99) throw `mínimo 1 y máximo 99!`
+let { index, latin, arabic, translation_id, translation_en } = json.find(v => v.index == args[0].replace(/[^0-9]/g, ''))
+return m.reply(`🔢 *Número:* ${index}
 ${arabic}
-
+ 
 ${latin}
 
 ${translation_id}
 
 ${translation_en}
-`.trim())
-    }
-    m.reply(contoh + data + anjuran)
-}
-handler.help = ['frase [escribe un número 1 - 99]']
-handler.tags = ['quran']
-handler.command = /^(frase(s)?)$/i
+`.trim())}
+m.reply(ejemplo + data + organizar)
+}}
+handler.tags = ['fun']
+handler.command = ['piropo', 'chiste', 'reto', 'verdad', 'frases']
+handler.register = true
 export default handler
+
+function pickRandom(list) {
+return list[Math.floor(list.length * Math.random())]}
+
+global.piropo = ["Me gustaría ser papel para poder envolver ese bombón.", "Eres como wifi sin contraseña, todo el mundo te busca", "Quién fuera bus para andar por las curvas de tu corazón.", "Quiero volar sin alas y salir de este universo, entrar en el tuyo y amarte en silencio.", "Quisiera ser mantequilla para derretirme en tu arepa.", "Si la belleza fuera pecado vos ya estarías en el infierno.", "Me Gustaría Ser Un Gato Para Pasar 7 Vidas A Tu Lado.", "Robar Está Mal Pero Un Beso De Tu Boca Sí Me Lo Robaría.", "Qué Hermoso Es El Cielo Cuando Está Claro Pero Más Hermoso Es El Amor Cuando Te Tengo A Mi Lado.", "Bonita, Camina Por La Sombra, El Sol Derrite Los Chocolates.", "Si Fuera Un Correo Electrónico Serías Mi Contraseña.", "Quisiera que fueses monte para darte machete", "Perdí mi número de teléfono ¿Me das el tuyo?", "¿Cómo te llamas para pedirte de regalo a Santa Claus?", " En el cielo hay muchas estrellas, pero la más brillante está en la Tierra y eres tú.", "¿Acaba de salir el sol o es la sonrisa que me regalas hoy?", "No es el ron ni la cerveza, eres tú quien se me ha subido a la cabeza", "Si hablamos de matemáticas eres la suma de todos mis deseos.", "Pareces Google porque tienes todo lo que yo busco.", "Mi café favorito, es el de tus ojos.", "Quiero ser photoshop para retocarte todo el cuerpo.", "Quisiera que fueras cereal, para cucharearte en las mañanas.", "Quien fuera hambre, para darte tres veces al día."]
+
+global.chiste = ["¿Cuál es el último animal que subió al arca de Noé? El del-fin..", "¿Cómo se dice pañuelo en japonés? Saka-moko", "¿Cómo se dice disparo en árabe? Ahí-va-la-bala..", "¿Qué le dice un gusano a otro gusano? Voy a dar una vuelta a la manzana.", "Un gato empieza a ladrar en el tejado de una casa. Otro gato, sorprendido, le dice: Estás loco gato, ¿por qué ladras en vez de maullar? El gatito le responde: ¿A caso no puedo aprender otro idioma?", "El doctor le dice al paciente: respire profundo que lo voy a auscultar. El paciente le responde: doctor, ¿de quién me va a ocultar si no le debo a nadie?\nSale el doctor después de un parto y el padre de la criatura le pregunta: ¿Doctor cómo salió todo? El doctor le dice: todo salió bien, pero tuvimos que colocarle oxígeno al bebé. El padre, horrorizado, le dice: pero doctor, nosotros queríamos ponerle Gabriel..", "Un pez le pregunta a otro pez: ¿qué hace tu mamá? Este le contesta: Nada, ¿y la tuya qué hace? Nada también.", "¿Cuál es el colmo de Aladdín? Tener mal genio", "El profesor le dice al estudiante después de haberle corregido la tarea: Tu trabajo me ha conmovido. El estudiante, sorprendido, le pregunta: ¿Y eso por qué profesor? El profesor con cara de burla le dice: Porque me dio mucha pena.", "Le dice el niño a la madre: Mamá, no quiero jugar más con Pedrito. La madre le pregunta al niño: ¿Por qué no quieres jugar más con él? Porque cuando jugamos a los tacos de madera y le pego con uno en la cabeza, de repente se pone a llorar.", "A Juanito le dice la maestra: Juanito, ¿qué harías si te estuvieses ahogando en la piscina? Juanito le responde: Me pondría a llorar mucho para desahogarme.", "Hijo, me veo gorda, fea y vieja. ¿Qué tengo hijo, qué tengo? Mamá, tienes toda la razón.", "¿Cómo se dice pelo sucio en chino? Chin cham pu.", "Había una vez un niño tan, tan, tan despistado que... ¡da igual, me he olvidado del chiste!", "Una amiga le dice a otra amiga: ¿Qué tal va la vida de casada? Pues no me puedo quejar, dice ella. ¿O sea que va muy bien, no? No, no me puedo quejar porque mi marido está aquí al lado.", "¿Por qué las focas miran siempre hacia arriba? ¡Porque ahí están los focos!", "Camarero, ese filete tiene muchos nervios. Pues normal, es la primera vez que se lo comen.", "¿Cómo se llama el primo de Bruce Lee? Broco Lee.", "Una madre le dice a su hijo: Jaimito, me ha dicho un pajarito que te drogas. La que te drogas eres tú, que hablas con pajaritos."]
+
+global.bucin = ["Pasa el pack de una hormiga",
+"Dile a tus amigos que te vas a vivir a EU y mándame una captura de lo que te haya dicho",
+"Grita desde la ventana que quieres mamar y mándame el vídeo",
+"Escribe el nombre de tu crush",
+"Debes de poner el nombre de mi creador en tu estado de WhatsApp, sin dar contexto",
+"Envíame una fotografía tuya",
+"Debes de dibujar en alguna parte de tu cuerpo el nombre de algún integrante del grupo, luego realiza una foto y envíala",
+"Hazte una foto dándole un beso a una Televisión",
+ "Mándame una fotografía en ropa interior",
+"Escribe en tu estado de WhatsApp que te gusta comer tierra",
+"Debes de poner la fotografía de un participante del grupo que sea del sexo opuesto al tuyo en tu perfil de WhatsApp durante 3 días 📸📸",
+"Tienes que mandar un audio cantando la canción: Un pato que va cantando alegremente cua cua 🦆",
+"Envía un mensaje a tu ex y dile todavía me gustas", "Envía un audio diciendo amo a The Shadow Brokers - Bot", 
+"Dile a tu crush que la amas y pasa captura al grupo", "Envía un audio cantando", 
+"Envía una foto en la que salgas tu sin taparte la cara ni nada", "Envía un video bailando", 
+"Invita a personas que no conoces a tomarse una selfi contigo y luego envíalo al grupo", 
+"Elija algunos números aleatorios de sus contactos y envíeles un mensaje de texto con el mensaje 'Estoy embarazad@'.", 
+"¡Tome cualquier bebida que esté cerca de usted, luego mézclela con chile y beba!", 
+"Tome un número aleatorio de sus contactos, llámelo y dígale 'te amo' ", 
+"Compre la comida más barata en la cafetería (o compre una botella de agua) y diga entre sollozos a sus compañeros de clase: 'Esta ... es la comida más cara que he comprado)' ", 
+" Compre una botella de coca cola y salpique flores con ella frente a la multitud.", 
+" Párese cerca del refrigerador, cierre los ojos, elija alimentos al azar en él, incluso cuando coma, sus ojos deben estar cerrados.", 
+" De pie en medio de la cancha de baloncesto y gritando: 'TE AMO MI PRÍNCIPE / PRINCESA' ", 
+"Presenta tus respetos a alguien de la clase y luego di: 'Estoy a su servicio, Majestad' ", 
+" Caminando aplaudiendo y cantando la canción 'Feliz cumpleaños' de la clase al pasillo.", 
+" Arrodíllate sobre una rodilla y di '¿Cásate conmigo?' la primera persona en entrar a la habitación.", 
+" Haz un tocado absurdo con tejido, sea lo que sea, sigue pidiendo poses frente a la cámara, sigue subiendo", 
+"Dile 'ERES HERMOSA / MUY HERMOSA, NO MIENTES' a la chica que crees que es la más bonita de esta clase.", 
+" Dile a alguien en clase: 'Primero me dijeron que era tu gemelo, nos separamos y luego me sometí a una cirugía plástica. Y esto es lo más serio que he dicho' ", 
+" Tirar el cuaderno de alguien a la basura, frente a sus ojos, diciendo 'Este libro nadie puede entender' ", 
+" ¡Arranca el pelo de tu propia pierna 3 veces!", 
+" Chatea con tus padres, diles que los extrañas con emoticonos tristes.", 
+" Intente buscar en Google cosas aterradoras o ridículas como tripofobia, etc.", 
+" Siéntese relajado en medio de la cancha de baloncesto mientras finge que es una playa para tomar el sol.", 
+" Llena tu boca de agua y tienes que aguantar hasta dos rondas, si te ríes y derramas o bebes, entonces tienes que volver a llenar y agregar una ronda más.", 
+" Salude a la primera persona que entre en esta sala y diga '¡Bienvenido a Quién quiere ser millonario!' ", 
+"Envía un mensaje de texto a tus padres '¡Hola, hermano! ¡Acabo de comprar el último número de la revista Playboy!' ", 
+"Envíales un mensaje de texto a tus padres: 'Mamá, papá, ya sé que soy un niño adoptado del orfanato. No ocultes esto más'.", 
+" Envía tres números aleatorios en tus contactos y escribe 'Me acabo de convertir en modelo de la revista Playboy' ", 
+" ¡Come una cucharada de salsa de soja dulce y salsa de soja!", 
+" Come algo pero no uses las manos.", 
+" Enojarse con sus amigos que no vienen a pesar de que tienen una cita para jugar 'Verdad o Reto' juntos", 
+"¡Rompe el huevo con la cabeza!", 
+"Coma alimentos que se hayan mezclado y tendrán un sabor extraño, pero asegúrese de que los alimentos no sean dañinos para la salud a largo o corto plazo.", 
+"Baila como Girls 'Generation para los niños frente a la clase, o baila como Super Junior para las niñas.", 
+"Izar el asta de la bandera sin la bandera.", 
+"Hablando de la persona que te gusta, de tus amigos más cercanos, del sexo opuesto que no conoces en absoluto y cosas por el estilo.", 
+"Copia los peinados de todos tus amigos.", 
+"Cantando la canción HAI TAYO frente a mucha gente mientras baila", 
+"Cante la canción Baby Shark en voz alta en el aula.", 
+"Pedir prestado algo a los vecinos", 
+"Pide la firma de uno de los profesores más feroces mientras dices 'Eres verdaderamente la persona que más admiro en el mundo' ", 
+" Pídale dinero a alguien (al azar ) en la calle diciendo 'No tengo dinero para tomar un angkot'.", 
+" Beba algo que haya sido preparado / acordado, pero asegúrese de que no sea peligroso, puede ser como beber jarabe mezclado con salsa de soja.", 
+" Hablando con el emoticono-miedo de la persona que te gusta, está bien conversar con lo que quieras, a través de cualquier medio que puedas.", 
+" Canta tu película de Disney favorita fuera de casa mientras gritas.", 
+" Nombra de 1 azul a 20 azules rápidamente y no debes cometer ningún error. Si está mal, debe repetirse desde el principio.", 
+" Póngase una corona de papel de copia y diga a todos en la habitación 'HONOR AL REY' mientras señala a cada persona con una regla.", 
+" Vuelve a ponerte los pantalones hasta la mañana siguiente.", 
+" Abraza a la persona que NO te agrada en clase y di: 'Muchas gracias por ser la mejor persona para mí' ", 
+" Ve a un campo amplio, luego corre lo más rápido posible mientras dices 'Estoy loco, estoy loco' ", 
+" Elija una flor y luego conéctela a alguien que no conoce (debe ser del sexo opuesto)", 
+" Elige a una persona al azar en la calle, luego di 'No sabes que eres hermosa' (ala One Direction)", 
+" Fingir estar poseído ejm: poseído por un tigre, etc.", 
+" Pídale que silbe ya que su boca está nuevamente llena de comida.", 
+" Pide ser un mesero para que te sirva con tus amigos para el almuerzo.", 
+" Dígales que usen calcetines para hacer guantes.", 
+"Dígales que usen el sombrero más extraño / el casco más absurdo durante la próxima ronda.", 
+"Llama a tu mamá y dile 'mamá, quiero casarme lo antes posible' ", 
+"Llama a tu ex y di 'te extraño' ", 
+"Cambia de ropa con la persona más cercana hasta la siguiente ronda.", 
+"Actualice el estado en WhatsApp lo que sea con palabras que comiencen con 'S' ", 
+"Sube un video de canto a YouTube que esté cantando canciones populares.", 
+"Colorea tus uñas de las manos y de los pies de diferentes colores durante una semana.", 
+"come 2 cucharadas de arroz sin guarniciones", 
+"Envie el emoji '🦄💨' cada vez que escriba en un grupo 1 día", 
+"diga '¡Bienvenido a Quién quiere ser millonario!' a todos los grupos que tienes", 
+"canta el coro de la última canción que tocaste", 
+"Envia un audio de voz a tu ex / enamorado / novia, dile hola (nombre), quiero llamar, solo un momento. Te Extraño🥺👉🏼👈🏼 ", 
+"Dile a la gente al azar: Primero me dijeron que era tu gemelo, nos separamos y luego me sometí a una cirugía plástica. Y esto", 
+"¡Haz 1 rima para el primer jugador!", 
+"cuenta tu propia versión de cosas vergonzosas", 
+"cambiar el nombre a 'Gay' durante 24 horas", 
+"¡Menciona tu tipo de novia!", 
+"Di 'Estoy enamorado de ti, ¿quieres ser mi novio o no?' al último sexo opuesto con el que conversaste en WhatsApp, espera a que responda", 
+"Háblale a tu ex por WhatsApp y dile 'te amo, por favor vuelve'. Manda una captura de pantalla como evidencia de reto cumplido!"] 
+
+global.verdad = ["¿Alguna vez te ha gustado alguien? ¿Cuánto tiempo?",
+  "Si es posible o si quieres, en gc / fuera de gc, ¿con quién harás amistad? (Puede ser diferente / del mismo tipo)",
+  "¿cual es tu mas grande miedo?",
+  "¿Alguna vez te ha gustado alguien y has sentido a esa persona como tú también?",
+  "¿Cuál es el nombre del exnovio de tu amiga que una vez te gustó en secreto?",
+  "¿Alguna vez has robado el dinero de tu madre o de tu padre? ¿La razón?",
+  "lo que te hace feliz cuando estás triste",
+  "¿Alguna vez has sido amor no correspondido? ¿Si has estado con quién? ¿Cómo se siente brou?",
+  "¿Alguna vez has tenido una aventura con alguien?",
+  "lo más temido",
+  "quién es la persona más influyente en tu vida",
+  "qué orgullo tienes este año",
+  "quién es la persona que puede enfermarte",
+  "quien es la persona que alguna vez te puso cachondo",
+  "(para los musulmanes) ¿nunca has rezado en todo el día?",
+  "¿Quién es el más cercano a su tipo de pareja ideal aquí",
+  "¿Con quién te gusta jugar?",
+  "¿Alguna vez has rechazado a alguien? ¿Por qué?",
+  "Menciona el incidente que te hizo daño y que aún recuerdas",
+  "¿Qué logros has obtenido este año?",
+  "¿Cuál es tu peor hábito en la escuela?", "¿Qué programa de televisión odias más? ¡Da la razón!", "¿Cuál es el vestido más feo (en su opinión) que ha usado y cuándo lo usó?", "¿Qué es lo peor (chisme) que has dicho sobre tu amigo?","¿Qué es lo más vergonzoso de ti?"," ¿Qué es lo primero que ves cuando miras a otra persona (del sexo opuesto)?", 
+"¿Qué es lo primero que te viene a la mente cuando te miras al espejo?","¿Que es lo mas tonto que has hecho en tu vida?"," ¿Cuál es el peor sueño que has tenido?"," ¿Cuál es el sueño más loco que puedes recordar hasta ahora?",
+" ¿Cuál es tu peor rasgo en tu opinión?", 
+" ¿Qué rasgo te gustaría cambiar de ti mismo?", 
+" ¿Qué rasgo te gustaría cambiar en tu amigo?", 
+" ¿Qué harías si tu novio te dijera que tienes mala nariz o dedos?", 
+" ¿En qué piensas antes de dormir? ej .: fantasear con una pareja, etc.", 
+"¿Qué crees que se destaca más de ti?"," ¿Qué parte del cuerpo de tu amigo te gusta más y desearías tener?", 
+"¿Qué parte de tu cuerpo odias más?"," De todas las clases de la escuela, ¿a qué clase le gustaría ingresar y qué clase le gustaría evitar?", 
+"¡Describe a tu amigo más cercano!"," ¡Descríbete en una palabra!"," ¿Qué películas y canciones te han hecho llorar?", 
+" ¿Qué es algo que has mantenido en secreto hasta ahora y nadie lo ha descubierto?", 
+" ¿Qué es lo más romántico que alguien (del sexo opuesto) te ha hecho o regalado?", 
+"¿Qué es lo más desagradable que has experimentado?", 
+" Si nacieras de nuevo y tuvieras que ser uno de tus amigos, ¿a quién elegirías ser?", 
+" Si tienes superpoder / superpoder, ¿qué quieres hacer?", 
+" Si el apocalipsis llega pronto, ¿qué haces?", 
+" Si te pidieran que te sometieras a una cirugía plástica con una muestra de rostro de tu compañero de clase, ¿a quién imitarías?", 
+" Alguna vez has robado algo?", 
+" ¿Tiene miedo a morir? ¿Por qué?", 
+" ¿Cuándo fue la última vez que lloraste y por qué?", 
+" ¿Cuáles son tus habilidades especiales?", 
+" ¿Cómo te puede gustar la persona que te gusta?", 
+" ¿Cuál crees que es un buen rasgo de tu amigo más cercano que él o ella no conozca?", 
+" ¿Con qué tipo de persona te gustaría casarte algún día?", 
+" En tu opinión, ¿cuál es el trabajo más atractivo para el amigo que está sentado a tu lado? ¿Y por qué?", 
+" ¿Con quién quieres intercambiar por un día? (amigos más cercanos que ambos conocen) y por qué", 
+" ¿Alguna vez has esperado en secreto que la relación de alguien con su novia se rompiera? ¿Quién?", 
+" ¿Prefiere AMIGAS o AMIGOS? ¿Por qué?", 
+" ¿Qué cita recuerdas más y te gusta?", 
+" ¿Qué secretos nunca les has contado a tus amigos hasta ahora?", 
+" ¿Quiénes son sus verdaderos modelos a seguir?", 
+" ¿Cuál de tus amigos crees que es matre?", 
+" ¿Cuál de tus amigos crees que tiene menos corte de pelo?", 
+" ¿Cuál de tus amigos es el más fotogénico? ", 
+" ¿Quién es tu mejor ex? ¡¿Y por qué rompieron ?!", 
+" ¿Cómo se llama el artista con el que hablaste en secreto?", 
+" ¿Cómo se llamaba el profesor que te gustaba?", 
+" ¿Cuál es el nombre de la exnovia de tu amigo que te ha gustado en secreto?", 
+" ¿Cuál es el nombre de la persona (del sexo opuesto) que crees que sería divertido ser novia?", 
+" ¿Cuál es el nombre de la persona que odias, pero crees que le gustas a esa persona (no necesariamente del sexo opuesto)?", 
+" ¿Cuál es el nombre de la persona a la que has estado señalando en secreto?", 
+" ¿Quién es la persona (del sexo opuesto) que más se te pasa por la cabeza?", 
+" ¿Quién es la persona más molesta entre tus amigos? ¡la razón!", 
+" ¿A quién de tus amigos crees que debería renovarse?", 
+" ¿Quién está más cerca de tu pareja ideal aquí?", 
+"Padre o madre", 
+"La parte del cuerpo que no te gusta", 
+"¿Alguna vez has hecho trampa?", 
+"¿Alguna vez te han besado?", 
+"¿Qué es lo primero que harías si te despertaras como del sexo opuesto?", 
+"¿Alguna vez has dejado que alguien más se meta en problemas por algo que hiciste?", 
+"¿Qué es lo más embarazoso que has hecho en tu vida?", 
+" ¿Cuál es la razón más ridícula por la que has roto con alguien?", 
+" ¿Cuál es el peor hábito que tienes?", 
+" ¿Cuál crees que es tu mejor característica? ¿Y que es lo peor?", 
+" ¿Cuál es la cosa más valiente que has hecho?", 
+" ¿Cuándo fue la última vez que mojaste la cama?", 
+" ¿Con qué sueñas más sobre dormir?", 
+" Si va a ganar dinero ilegalmente, ¿cómo lo hace?", 
+" ¿Qué cosas infantiles sigues haciendo?", 
+" Si fueras ciego, ¿quién sería tu perro guía?", 
+" ¿Qué es lo que más te impresiona?", 
+" Si se le permitiera usar solo 3 palabras durante el resto de la noche a partir de ahora, ¿cuál sería?", 
+" Si fueras un dictador, ¿qué ley promulgarías primero?", 
+"Si vivieras durante la era nazi, ¿quién serías?", 
+"¿Cuál fue la experiencia más vergonzosa en la escuela / tiempo de estudio / educación / el año pasado?", 
+"¿Cuál es el mayor error de tu vida?", 
+"¿Qué no harías nunca, incluso si supieras que solo te quedan 12 horas de vida?", 
+" ¿Qué delitos ha cometido?", 
+" Cuéntame un secreto de tu infancia.", 
+" ¿Cuál es su mayor representante (secreto)?", 
+" ¿Qué quieres hacer conmigo… ( x persona), si luego puedes borrar su memoria (él,…)?", 
+" ¿Qué es lo peor que le has hecho a alguien?", 
+" ¿Quién te gusta más?", 
+"¿Alguna vez te has enamorado de alguno de los presentes?", 
+" Si fueras un vampiro, ¿a cuál de nosotros morderías ahora?", 
+" ¿Ha defecado alguna vez en público?", 
+" ¿Cuál es tu fantasía más oscura?", 
+" ¿Qué es lo mejor que has tenido con alguien más?", 
+" ¿Cuál es el mayor desvío para ti?", 
+" ¿Qué es lo que más te gusta de tu cuerpo y qué es lo más feo?", 
+" ¿A quien te gustaría ver desnuda?", 
+" ¿Quién en esta ronda puede enamorarte?", 
+" ¿Alguna vez has tenido un sueño erótico donde sucedió alguien de este grupo?", 
+" Si te vas a tatuar en el área genital, ¿que habrá allí?", 
+" ¿Qué es más importante en una relación: el sexo o el amor?", 
+" ¿Crees que el sexo es genial, bueno, bueno, divertido a veces, o realmente no te importa?", 
+" ¿Qué te hace realmente amar?", 
+"¿Cuántas veces a la semana / mes tiene relaciones sexuales y con qué frecuencia desea tener relaciones sexuales?", 
+" ¿Con cuántas parejas sexuales te has acostado?",
+" ¿Qué parte del cuerpo te hace más?", 
+" ¿Cómo, dónde y con quién estuviste primero?", 
+" ¿Qué importancia tienen para ti los juegos previos prolongados?", 
+" ¿Qué debe hacer un hombre o una mujer para seducirte?", 
+" ¿Alguna vez has tenido sexo con un buen amigo?", 
+" ¿Alguna vez ha tenido relaciones sexuales con alguno de estos grupos, excepto con su pareja?", 
+"¿Qué animal se adapta mejor a ti y por qué?", 
+" ¿Cuál es tu peor cita?", 
+" ¿A quién quieres besar ahora?", 
+" ¿Cuál es tu oscura fantasía secreta?", 
+" ¿Prefieres tatuarte el culo o perforarte la lengua?", 
+" ¿Eres siempre leal?", 
+" ¿Tienes un enamoramiento adolescente?", 
+" ¿De qué persona te enamoraste?", 
+" ¿Con qué celebridad te gustaría salir?", 
+" ¿Cuál fue el momento más embarazoso de tu vida?", 
+" ¿Qué boca te gusta más del grupo de aquí?", 
+" ¿Qué jugador tiene la mano más hermosa?", 
+" ¿Dónde fue tu primer beso?", 
+" ¿A quién del grupo te gustaría besar más?", 
+" ¿Quién en la mesa es quizás el más divertido?", 
+" ¿Cuál es el mayor error de tu vida?", 
+" ¿Te pasó algo vergonzoso en una cita?", 
+" ¿Ha estado alguna vez en contacto con drogas?", 
+" ¿A qué persona quieres besar ahora?", 
+" ¿Cuándo fue la última vez que estuvo borracho?", 
+" ¿Alguna vez has hecho trampa en un examen escolar?", 
+" ¿Has robado algo en el pasado?", 
+" ¿Roncas por la noche?", 
+" ¿Cuales tu cancion favorita?", 
+" ¿Con qué jugadores comerciará durante 1 semana y por qué?", 
+" Te mudaste a una isla desierta, ¿a quién te llevaste de aquí?", 
+" ¿A que temes más?", 
+" ¿Dónde te afeitas en todas partes?", 
+"¿Tienes un apodo?", 
+" ¿Miras en el baño antes de lavarte?", 
+"¿Quién te dio la peor angustia?", 
+" Cuantas veces te has besado", 
+"¿Qué es lo más embarazoso que te ha pasado?", 
+"¿Cuántos chicos / chicas has besado?", 
+"¿De quien estas enamorado(a) ?", 
+"Que estrella te gusta", 
+"¿Empezaste algo con XY (insertar nombre)?", 
+"Alguna vez has robado algo?"] 
 
 global.asmaulhusna = [
     {

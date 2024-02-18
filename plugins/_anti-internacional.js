@@ -7,12 +7,12 @@ if (!m.isGroup) return !1
 let chat = global.db.data.chats[m.chat]
 if (isBotAdmin && chat.antifake) {
 let texto = `${lenguajeGB['smsAvisoAG']()}${lenguajeGB['smsInt1']()} *@${m.sender.split`@`[0]}* ${lenguajeGB['smsInt2']()}`
-	
+
 if (m.sender.startsWith('6' || '6')) {
 global.db.data.users[m.sender].block = true
 await conn.reply(m.chat, texto, m)
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}
-		
+
 if (m.sender.startsWith('90' || '90')) {
 global.db.data.users[m.sender].block = true
 await conn.reply(m.chat, texto, m)
@@ -22,7 +22,7 @@ if (m.sender.startsWith('92' || '92')) {
 global.db.data.users[m.sender].block = true
 await conn.reply(m.chat, texto, m)
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}
-	
+
 if (m.sender.startsWith('93' || '93')) {
 global.db.data.users[m.sender].block = true
 await conn.reply(m.chat, texto, m)
@@ -37,17 +37,17 @@ if (m.sender.startsWith('7' || '7')) {
 global.db.data.users[m.sender].block = true
 await conn.reply(m.chat, texto, m)
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}
-	
+
 if (m.sender.startsWith('49' || '49')) {
 global.db.data.users[m.sender].block = true
 await conn.reply(m.chat, texto, m)
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}
-	
+
 if (m.sender.startsWith('2' || '2')) {
 global.db.data.users[m.sender].block = true
 await conn.reply(m.chat, texto, m)
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}
-	
+
 if (m.sender.startsWith('91' || '91')) {
 global.db.data.users[m.sender].block = true
 await conn.reply(m.chat, texto, m)
